@@ -1,34 +1,31 @@
 <html>
 <head>
-    <title>Login Page</title>
-    <!-- link to css -->
-    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <title>Sign Up Page</title>
+    <link href="/css/signup.css" rel="stylesheet" type="text/css">
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
     <body>
-    <div class="login-box">
+    <div class="signup-box">
     <img src="/image/avatar.png" class="avatar">
-        <h1>Login Here</h1>
+        <h1>Sign Up Here</h1>
             <form>
-            <!-- username text field -->
+            <!-- username text field  -->
             <p>Username</p>
-            <input type="text" name="username" placeholder="" id="username">
+            <input type="text" name="username" placeholder="">
             <!-- password text field -->
             <p>Password</p>
-            <input type="password" name="password" placeholder="" id="password">
+            <input type="password" name="password" placeholder="">
             </form>
-            
-            <!-- login button -->
-            <button class="login-button" id="login" type="login" name="login" value="login">Login</button>
-            <!-- signup/back button  -->
-            <div class="signup-button"><a href="/signup">Sign Up</a></div>
-            <div class="main-button"><a href="/">Back to Main</a></div>
+
+            <!-- sign up button  -->
+            <button class="signup-button" id="signup" type="signup" name="signup" value="signup">Sign Up</button>
+            <!-- button togo back to login page  -->
+            <div class="back-button"><a href="/login">Back</a></div>
             <!-- error message -->
             <h3 id="error_msg">Error Msg</h3>
     </div>
     
-
 
     <!-- navigation bar from bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,7 +53,6 @@
           </ul>
         </div>
       </nav>
-
 
 
     </body>

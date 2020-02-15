@@ -1,0 +1,185 @@
+
+body{
+   /* transform-origin: 0 0;      move element*/  
+    margin: 0;
+    padding: 0;
+    background: url(/image/login.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.login-box{
+    width: 400px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    /* font-family: "Roboto", Arial, sans-serif; */
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    /* font-family: "Roboto", Arial, sans-serif; */
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+}
+.login-box a:hover
+{
+    color: #39dc79;
+}
+
+.signup-button {
+  text-align: center;
+  height: 40px;
+  margin-top: 6%;
+}
+
+.main-button {
+  text-align: center;
+  height: 30px;
+}
+
+
+
+.login-button {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 250px;
+    background: #bca897;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left:13%;
+  }
+
+
+
+.login-button:hover
+{
+    cursor: pointer;
+    background: #bbe1fa;
+    color: #000;
+}
+
+
+/* error msg  */
+h3 {
+    text-align: center;
+    color: red;
+    position: absolute;
+    bottom: -20%;
+    left: 34%;
+
+}
+
+
+
+/* navigation */
+.nav-login {
+    position: absolute;
+    right: 85px;
+}
+
+.nav-signup {
+    position: absolute;
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

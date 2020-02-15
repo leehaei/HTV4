@@ -22,4 +22,20 @@ router.get('/login', function(req, res) {
     });
 });
 
+router.get('/signup', function(req, res) {
+    res.render('signup', {
+        page:'Signup',
+        menuId: 'signup'
+    });
+});
+
+router.get('/finance', function(req, res) {
+    res.render('finance', {
+        page:'finance',
+        menuId: 'finance'
+    });
+});
+
+
+
 module.exports = router;
