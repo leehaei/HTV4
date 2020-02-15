@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 console.log("user",User)
 
 module.exports = {
-    // https://www.youtube.com/watch?v=QCJCglPLUgg
+    
     signUp: async (req, res, next) => {
         console.log('UsersController.signUp() called!');
         const userParam = { username, password } = req.value.body;
@@ -36,9 +36,9 @@ module.exports = {
         }
     },
 
-    // secret: async (req,res,next) => {
+    secret: async (req,res,next) => {
 
-    // }
+    }
 
 
 

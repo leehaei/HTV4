@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <title>Sign Up Page</title>
@@ -12,20 +13,20 @@
             <form>
             <!-- username text field  -->
             <p>Username</p>
-            <input type="text" name="username" placeholder="">
+            <input type="text" name="username" id="username" placeholder="">
             <!-- password text field -->
             <p>Password</p>
-            <input type="password" name="password" placeholder="">
+            <input type="password" name="password" id="password" placeholder="">
             </form>
 
             <!-- sign up button  -->
-            <button class="signup-button" id="signup" type="signup" name="signup" value="signup">Sign Up</button>
+            <button class="signup-button" id="signup_button" type="signup" name="signup" value="signup">Sign Up</button>
             <!-- button togo back to login page  -->
             <div class="back-button"><a href="/login">Back</a></div>
             <!-- error message -->
             <h3 id="error_msg">Error Msg</h3>
     </div>
-    
+
 
     <!-- navigation bar from bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,6 +55,23 @@
         </div>
       </nav>
 
+
+      <!-- javascript, for signup post -->
+      <script>
+        document.getElementById("signup_button").onclick = function() {
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+          console.log("username: ", username);
+          console.log("password: ", password);
+          if (username != "" && password != "") {
+            const userParam = { username, password }
+              signup(userParam);
+          }
+        }
+
+
+
+      </script>
 
     </body>
 </html>
