@@ -50,6 +50,7 @@ app.use(bodyParser.json());
 
 // mongo db 
 app.use('/api/userModel',require('./Api/User'));
+mongoose.Promise = global.Promise;
 
 //Route?
 // app.use('/users', require('./routes/users'));
