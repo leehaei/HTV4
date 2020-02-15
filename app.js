@@ -10,14 +10,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-
+const mongoose = require('mongoose');
 
 
 
 //MongoDB Connection
 const connectDB = require('./DB/Connection')
 connectDB();
-// app.use('/api/userModel',require('./Api/User'));
 
 
 
@@ -35,8 +34,25 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use(bodyParser.urlencoded({extended : true}));
+// app.use(bodyParser.urlencoded({extended : true}));
+// app.use(bodyParser.json());
+
+
+// app.use(bodyParser.urlencoded())
+// app.use(bodyParser.urlencoded({
+//     extended: true
+//   }));
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
+
+// mongo db 
+app.use('/api/userModel',require('./Api/User'));
+
+//Route?
+// app.use('/users', require('./routes/users'));
 
 // view engine setup
 app.set('views', path.join(__dirname, '/views'));

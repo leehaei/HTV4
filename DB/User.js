@@ -1,42 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+require('mongoose-double')(mongoose);
+const Schema = mongoose.Schema;
 
-const user = mongoose.Schema({
-    username:{
-        type:String
-    },
-    date:{
-        type:Date
-    },
-    university:{
-        type:String 
-    },
-    tuition:{
-        type:Double
-    },
-    program:{
-        type:String
-    },
-    program_length:{
-        type:Integer
-    }, 
-    expected_help:{
-        type:Double
-    },
-    grants:{
-        type:Double
-    },
-    loans:{
-        type:Double
-    },
-    income:{
-        type:Double
-    },
-    housing:{
-        type:Double
-    },
-    food:{
-        type:Double
-    }
+// const SchemaTypes = mongoose.Schema.Types;
+const user = new Schema({
+    username:String,
+    password:String
 });
 
-module.exports = User = mongoose.model('user',user);
+
+const User = mongoose.model('user',user)
+
+module.exports = User;
