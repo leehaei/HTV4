@@ -1,0 +1,23 @@
+{
+  "name": "HTV4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "author": "Haeim Lee",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.16.4",
+    "express-session": "^1.17.0",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
+}
