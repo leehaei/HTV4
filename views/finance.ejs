@@ -37,16 +37,24 @@
     <div class="form-group">
         <h1>Input your info</h1>
         <form>
+            <p>University</p>
+            <input type="text" id="form_university" placeholder="">          
             <p>Tuition</p>
             <input type="text" id="form_tuition" placeholder="">
-            <p>Length of Program</p>
+            <p>Program</p>
+            <input type="text" id="form_program" placeholder="">
+            <p>Program Length</p>
             <input type="text" id="form_lengthOfProgram" placeholder="">
-            <p>Grants/Loan</p>
+            <p>Expected Help</p>
+            <input type="text" id="form_expected_help" placeholder="">
+            <p>Grants</p>
             <input type="text" id="form_grants" placeholder="">
+            <p>Loans</p>
+            <input type="text" id="form_loans" placeholder="">
             <p>Housing</p>
             <input type="text" id="form_housing" placeholder="">
             <p>Income</p>
-            <input type="text" id="form_Income" placeholder="">
+            <input type="text" id="form_income" placeholder="">
         </form>    
 
         <button class="analyze-button" id="analyze_button">Analyze</button>
@@ -63,8 +71,25 @@
     </div>
 
 
-    <!-- navigation bar from bootstrap -->
-   
+    <script>
+      document.getElementById("analyze_button").onclick = function() {
+        var university = document.getElementById("form_university").value;
+        var tuition = document.getElementById("form_tuition").value;
+        var program = document.getElementById("form_program").value;
+        var program_length = document.getElementById("form_lengthOfProgram").value;
+        var expected_help = document.getElementById("form_expected_help").value;
+        var grants = document.getElementById("form_grants").value;
+        var loans = document.getElementById("form_loans").value
+        var housing = document.getElementById("form_housing").value;
+        var income = document.getElementById("form_income").value;
+        console.log("univ",university)
+        //analyze, draw graph
+
+        //post
+      }
+
+
+    </script>
 
     
 
