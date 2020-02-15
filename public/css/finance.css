@@ -8,37 +8,43 @@ body{
 }
 /* rgba(255, 255, 255, 0.705); */
 .result {
-    width: 950px;
-    height: 700px;
+    width: 40%;
+    height: 80%;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     position: absolute;
-    top: 50%;
-    right: -26%;
+    top: 55%;
+    left: 75%;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 0px 30px;
 }
 
 .form-group{
-    width: 600px;
-    height: 700px;
+    /* width: 40%;
+    height: 80%; */
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 55%;
+    left: 25%;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 0px 30px;
 }
+
+.navbar {
+    top:0px;
+
+}
+
 
 .avatar{
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: 50px;
     left: calc(50% - 50px);
 }
 
@@ -99,7 +105,8 @@ h1{
     font-size: 18px;
     border-radius: 20px;
     text-align: center;
-    margin-left: 13%;
+    left:25%;
+    /* margin-left: 10%; */
   }
 
 
@@ -111,12 +118,13 @@ h1{
 }
 
 /* error message  */
-h3 {
+h5 {
     text-align: center;
     color: red;
     position: absolute;
-    bottom:18px;
-    left:238px;
+    font-size: 4px;
+    bottom:6%;
+    left:40%;
 }
 
 /* navigation */
