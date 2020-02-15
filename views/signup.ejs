@@ -10,17 +10,17 @@
     <div class="signup-box">
     <img src="/image/avatar.png" class="avatar">
         <h1>Sign Up Here</h1>
-            <form>
-            <!-- username text field  -->
-            <p>Username</p>
-            <input type="text" name="username" id="username" placeholder="">
-            <!-- password text field -->
-            <p>Password</p>
-            <input type="password" name="password" id="password" placeholder="">
-            </form>
-
-            <!-- sign up button  -->
-            <button class="signup-button" id="signup_button" type="signup" name="signup" value="signup">Sign Up</button>
+            <form action="auth" method="POST">
+              <!-- username text field  -->
+              <p>Username</p>
+              <input type="text" name="username" id="username" placeholder="">
+              <!-- password text field -->
+              <p>Password</p>
+              <input type="password" name="password" id="password" placeholder="">
+              <!-- sign up button  -->
+              <button class="signup-button" id="signup_button" type="signup" name="signup" value="signup">Sign Up</button>
+              <script src="../Api/User.js"></script>
+              </form>
             <!-- button togo back to login page  -->
             <div class="back-button"><a href="/login">Back</a></div>
             <!-- error message -->
@@ -54,24 +54,5 @@
           </ul>
         </div>
       </nav>
-
-
-      <!-- javascript, for signup post -->
-      <script>
-        document.getElementById("signup_button").onclick = function() {
-          var username = document.getElementById("username").value;
-          var password = document.getElementById("password").value;
-          console.log("username: ", username);
-          console.log("password: ", password);
-          if (username != "" && password != "") {
-            const userParam = { username, password }
-              signup(userParam);
-          }
-        }
-
-
-
-      </script>
-
     </body>
 </html>

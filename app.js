@@ -1,25 +1,14 @@
-// var server = http.createServer(function (request, response) {
-//     router.css(request, response);
-//     router.home(request, response);
-//     router.user(request, response);
-//   });
-//   server.listen(3000);
-
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 const mongoose = require('mongoose');
-
-
+const auth = require('./Api/auth');
 
 //MongoDB Connection
 const connectDB = require('./DB/Connection')
 connectDB();
-
-
-
 
 
 var bodyParser = require('body-parser'); 
@@ -91,12 +80,17 @@ app.get('/finance', function(request, response) {
     response.render('finance');
 });
 
-// var server = http.createServer(function (request, response) {
-//   router.css(request, response);
-//   router.home(request, response);
-//   router.user(request, response);
-// });
-// server.listen(3000);
+//Authenticates login
+app.post('/auth', function(request, response) {
+    var username = request.body.username;
+    var password = request.body.password;
+    console.log("username: ", username);
+    console.log("password: ", password);
+    if (username != "" && password != "") {
+      const userParam = { username, password };
+      auth.signUp(userParam);
+    }
+});
 
 
 module.exports = app;

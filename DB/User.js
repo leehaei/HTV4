@@ -37,13 +37,13 @@ const user = new Schema({
     loans:{
         type:SchemaTypes.Double
     },        
-    income:{
+    incomeSchool:{
         type:SchemaTypes.Double
     },    
     housing:{
         type:SchemaTypes.Double
     },    
-    food:{
+    incomeGrad:{
         type:SchemaTypes.Double
     }        
 });

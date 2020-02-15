@@ -32,9 +32,9 @@ function test() {
             //adjusts for interest 
             interest = (totaldebt * Math.pow(1 + loanInterest, i - progLength)) - totaldebt;
             //
-            // adjust for income increase
-            //
-            totaldebt = totaldebt + interest + housing - incomeGrad; 
+            // adjusts for income increase
+            incomeIncrease = (incomeGrad * Math.pow(1 + incomeInterest, i - progLength)) - incomeGrad;
+            totaldebt = totaldebt + interest + housing - incomeGrad - incomeIncrease; 
             values.push(totaldebt);
         }
         console.log("Total debt: " + totaldebt);

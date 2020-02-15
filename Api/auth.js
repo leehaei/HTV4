@@ -1,5 +1,5 @@
 const User = require('../DB/User')
-const bcrypt = require('bcryptjs');
+const bycrypt = require('bcryptjs');
 
 console.log("user",User)
 
@@ -7,23 +7,31 @@ module.exports = {
     
     signUp: async (req, res, next) => {
         console.log('UsersController.signUp() called!');
-        const userParam = { username, password } = req.value.body;
+        try {
+            var username = req.username;
+            var password = req.password;
 
-        //check if there is a user with the same username
-        const foundUser = await User.findOne({ username });
-        if (foundUser) {
-            res.status(403).json({error:"username is already in use"})
-        }
+            //check if there is a user with the same username
+            const foundUser = await User.findOne({ username });
+            if (foundUser) {
+                res.status(403).json({error:"username is already in use"})
+            }
 
-        user.hash = bycrypt.hashSync(userParam.password,10)
-        const newUser = new User({ username, password });
-        await newUser.save();
-        res.json({ user:"created "});
+            User.hash = bycrypt.hashSync(password,10)
+            const newUser = new User({ username, password });
+            await newUser.save();
+            //res.json({ user:"created "});
+          }
+          catch(e) {
+            console.log('Catch an error: ', e)
+          }
+        
     },
 
     //https://jasonwatmore.com/post/2018/06/14/nodejs-mongodb-simple-api-for-authentication-registration-and-user-management
     login: async (req, res, next) => {
-        const { username, password } = req.value.body;
+        var username = req.username;
+        var password = req.password;
         const user = await User.findOne({ username });
         if (user && bycript.compareSync(password, user.hash)) { 
             const { hash, ...userWithoutHash } = user.toObject();
