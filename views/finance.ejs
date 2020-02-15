@@ -54,7 +54,7 @@
             <p>Housing</p>
             <input type="text" id="form_housing" placeholder="">
             <p>Income</p>
-            <input type="text" id="form_Income" placeholder="">
+            <input type="text" id="form_income" placeholder="">
         </form>    
 
         <button class="analyze-button" id="analyze_button">Analyze</button>
@@ -72,7 +72,7 @@
 
 
     <script>
-      document.getElementById("analyze-button").onclick = function() {
+      document.getElementById("analyze_button").onclick = function() {
         var university = document.getElementById("form_university").value;
         var tuition = document.getElementById("form_tuition").value;
         var program = document.getElementById("form_program").value;
@@ -82,7 +82,7 @@
         var loans = document.getElementById("form_loans").value
         var housing = document.getElementById("form_housing").value;
         var income = document.getElementById("form_income").value;
-
+        console.log("univ",university)
         //analyze, draw graph
 
         //post
