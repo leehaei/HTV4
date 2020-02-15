@@ -6,15 +6,40 @@ const route = express.Router();
 // route.use(express.json());
 
 route.post('/', async(req,res) => {
-    console.log('req.body', req.body);
-    const{username,password} = req.body;
+    const{username,
+        password,
+        date,
+        university,
+        tuition,
+        program,
+        program_length,
+        expected_help,
+        grants,
+        loans,
+        income,
+        housing,
+        food
+    } = req.body;
+
     let user = {};
     user.username = username;
     user.password = password;
-    console.log('user22', user.username);
+    user.date = date;
+    user.university = university;
+    user.tuition = tuition;
+    user.program = program;
+    user.program_length = program_length;
+    user.expected_help = expected_help;
+    user.grants = grants;
+    user.loans = loans;
+    user.income = income;
+    user.housing = housing;
+    user.food = food;
+    
+    console.log('user created', user.username);
+
     let userModel = new User(user);
     await userModel.save();
-    // console.log('userModel', userModel);
     res.json(userModel); 
 })
 
