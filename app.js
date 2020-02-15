@@ -38,4 +38,8 @@ app.get('/budget', function(request, response) {
     response.render('budget');
 });
 
+app.get('/login', function(request, response) {
+    response.render('login');
+});
+
 module.exports = app;

@@ -7,10 +7,18 @@ router.get('/', function(req, res) {
         menuId: 'main'
     });
 });
+
 router.get('/budget', function(req, res) {
     res.render('budget', {
         page:'Budget',
         menuId: 'budget'
+    });
+});
+
+router.get('/login', function(req, res) {
+    res.render('login', {
+        page:'Login',
+        menuId: 'login'
     });
 });
 
