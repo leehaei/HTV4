@@ -22,7 +22,7 @@ UniCost aims to peak students' interest in their financial futures, to give them
 
 
 ## Features:
-1. We used **EJS** (Embedded JavaScript templates) for front end, which is a templating language that allows you to generate HTML. EJS was used as a templating engine for **Node.js** for backend, specifically Excess. 
+1. We used **EJS** (Embedded JavaScript templates) for front end, which is a templating language that allows you to generate HTML. EJS was used as a templating engine for **Node.js** for backend, specifically Express. 
 2. The home page of the webpage is a simple navigation page that allows users to learn more about the website, explore main features of the web, or authenticate themselves. 
 3. Our app basically has two primary purposes: for **non-authenticated users** to use the web app as a one time basis, or have a **personalized finance tracker** with their unique username and database. 
 4. For our backend database, **MongoDB Atlas** was used
