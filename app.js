@@ -83,7 +83,7 @@ app.get('/finance', function(request, response) {
     response.render('finance');
 });
 
-//Authenticates login
+//Authenticates signup
 app.post('/auth', function(request, response) {
     var username = request.body.username;
     var password = request.body.password;
@@ -93,6 +93,12 @@ app.post('/auth', function(request, response) {
       const userParam = { username, password };
       auth.signUp(userParam);
     }
+    response.render('finance');
+});
+
+//Authenticates login
+app.post('/login', function(request, response) {
+    response.render('finance');
 });
 
 app.post('/analyze', function(request, response) {
