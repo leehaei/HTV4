@@ -52,7 +52,7 @@ module.exports = {
                 
                 // adjusts for income increase
                 incomeIncrease = (incomeGrad * Math.pow(1 + incomeInterest, i - progLength)) - incomeGrad;
-                totaldebt = totaldebt + interest + housing - incomeGrad - incomeIncrease; 
+                totaldebt = totaldebt + interest - (incomeGrad * 0.2) - incomeIncrease; 
                 values.push(totaldebt);
             }
             console.log(totaldebt);
