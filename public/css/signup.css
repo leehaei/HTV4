@@ -8,11 +8,11 @@ body{
 }
 
 .signup-box{
-    width: 400;
-    height: 480;
+    width: 35%;
+    height: 75%;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    top: 50%;
+    top: 55%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -20,12 +20,14 @@ body{
     padding: 70px 30px;
 }
 .avatar{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 25%; 
+    height: 25%;
+    /* border-radius: 50%; */
     position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+    top: 5px;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* left: calc(50% - 50px); */
 }
 h1{
     margin: 0;
@@ -72,15 +74,17 @@ h1{
 .signup-button {
     border: none;
     outline: none;
-    height: 40px;
-    width: 250px;
     background: #bca897;
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
     text-align: center;
     margin-left:13%;
+    height: 13%;
+    width: 75%;
   }
+
+
 
 
 .signup-button:hover
