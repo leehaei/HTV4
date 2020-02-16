@@ -7,42 +7,28 @@ body{
     font-family: sans-serif;
 }
 /* rgba(255, 255, 255, 0.705); */
-.result {
-    width: 40%;
-    height: 90%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    position: absolute;
-    top: 59%;
-    left: 75%;
-    transform: translate(-50%,-50%);
+
+.finance-body {
+    display: flex;
     box-sizing: border-box;
-    padding: 0px 30px;
+    padding: 10px;
+}
+
+.finance-box {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    width: 50%;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+.result {
     
 }
 
 .form-group{
-    /* width: 40%;
-    height: 80%; */
-    /* background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    position: absolute;
-    top: 90%;
-    left: 27%;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 0px 30px; */
-    width:  40%;           /* Set this to your convenience */
-    height: 90%;          /* Set this to your convenience */
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    margin-top: -100px;     /* Half of height */
-    margin-left: -150px; 
-    font-size: 10px;
-    padding: 10px 30px; 
+
 }
 
 
@@ -113,13 +99,12 @@ h1{
     border: none;
     outline: none;
     height: 40px;
-    width: 400;
+    width: 100%;
     background: #bca897;
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
     text-align: center;
-    left:25%;
     margin: auto;
   }
 

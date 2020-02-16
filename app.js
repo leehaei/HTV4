@@ -64,10 +64,11 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(request, response) {
     response.render('main');
 });
-
+/*
 app.get('/budget', function(request, response) {
     response.render('budget');
 });
+*/
 
 app.get('/login', function(request, response) {
     response.render('login');

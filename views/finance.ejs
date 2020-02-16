@@ -6,93 +6,72 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head> 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img src="image/text.png" style="width: 10%; height: 10%;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/finance">Finance</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/budget">Budget</a>
-            </li>
-            <li class="nav-item">
-                <div class="nav-login"><a class="nav-link" href="/login">Login</a></div>
-            </li>
-            <li class="nav-item">
-                <div class="nav-signup"><a class="nav-link" href="/signup">Sign Up</a></div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
 <body>
-    <!-- text field box -->
-    <div class="form-group">
-        <h1 style="margin-bottom: 5px;">Input Your Info</h1>
-        <form action="analyze" method="POST">
-            <label>University</label>
-            <input type="text" id="university" name="university" placeholder="" style="margin-bottom: 5px;" style="font-weight: bold;">          
-            <label>Tuition</label>
-            <input type="text" id="tuition" name="tuition" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Program</label>
-            <input type="text" id="program" name="program" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>program Length</label>
-            <input type="text" id="lengthOfProgram" name="lengthOfProgram" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Expected Help</label>
-            <input type="text" id="expected_help"  name="expected_help" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Grants</label>
-            <input type="text" id="grants" name="grants" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Loans</label>
-            <input type="text" id="loans" name="loans" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Housing</label>
-            <input type="text" id="housing" name="housing" placeholder="" style="margin-bottom: 5px; font-weight: bold;"> 
-            <label>Income During School</label>
-            <input type="text" id="incomeSchool" name="incomeSchool" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <label>Expected Income After Graduation</label>
-            <input type="text" id="incomeGrad"  name="incomeGrad"placeholder="" style="margin-bottom: 5px; font-weight: bold;">
-            <button class="analyze-button" id="analyze_button"  type="analyze" name="analyze" value="analyze">Analyze</button>
-        </form>    
-        <!-- <h5 id="error_msg">Error Msg</h3> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="image/text.png" style="width: 10%; height: 10%;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/finance">Finance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" >Budget</a>
+              </li>
+              <li class="nav-item">
+                  <div class="nav-login"><a class="nav-link" href="/login">Login</a></div>
+              </li>
+              <li class="nav-item">
+                  <div class="nav-signup"><a class="nav-link" href="/signup">Sign Up</a></div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    <div class='finance-body'>
+      <!-- text field box -->
+      <div class="finance-box form-group">
+          <h1 style="margin-bottom: 5px;">Input Your Info</h1>
+          <form action="analyze" method="POST">
+              <label>University Name</label>
+              <input type="text" id="university" name="university" placeholder="" style="margin-bottom: 5px;" style="font-weight: bold;">          
+              <label>Tuition (yearly estimate)</label>
+              <input type="text" id="tuition" name="tuition" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Program Name </label>
+              <input type="text" id="program" name="program" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Program Length (in years)</label>
+              <input type="text" id="lengthOfProgram" name="lengthOfProgram" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Expected Help (yearly extra income)</label>
+              <input type="text" id="expected_help"  name="expected_help" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Grants (yearly estimate)</label>
+              <input type="text" id="grants" name="grants" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Loans (yearly estimate)</label>
+              <input type="text" id="loans" name="loans" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Housing (yearly estimate)</label>
+              <input type="text" id="housing" name="housing" placeholder="" style="margin-bottom: 5px; font-weight: bold;"> 
+              <label>Income During School (yearly estimate)</label>
+              <input type="text" id="incomeSchool" name="incomeSchool" placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <label>Expected Income After Graduation (yearly estimate)</label>
+              <input type="text" id="incomeGrad"  name="incomeGrad"placeholder="" style="margin-bottom: 5px; font-weight: bold;">
+              <button class="analyze-button" id="analyze_button"  type="analyze" name="analyze" value="analyze">Analyze</button>
+          </form>    
+          <!-- <h5 id="error_msg">Error Msg</h3> -->
+      </div>
+
+      <!--result displaying box  -->
+      <div class="finance-box result">
+          <h1>Result</h1>
+          <div>
+              <a href="https://plot.ly/~leehaei/0/?share_key=vJIfmuOGe3yFl2CUFY8o4J" target="_blank" title="date-axes" style="display: block; text-align: center;"><img src="https://plot.ly/~leehaei/0.png?share_key=vJIfmuOGe3yFl2CUFY8o4J" alt="date-axes" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+              <script data-plotly="leehaei:0" sharekey-plotly="vJIfmuOGe3yFl2CUFY8o4J" src="https://plot.ly/embed.js" async></script>
+          </div>
+      </div>
     </div>
 
-    <!--result displaying box  -->
-    <div class="result">
-        <h1>Result</h1>
-        <div>
-            <a href="https://plot.ly/~leehaei/0/?share_key=vJIfmuOGe3yFl2CUFY8o4J" target="_blank" title="date-axes" style="display: block; text-align: center;"><img src="https://plot.ly/~leehaei/0.png?share_key=vJIfmuOGe3yFl2CUFY8o4J" alt="date-axes" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-            <script data-plotly="leehaei:0" sharekey-plotly="vJIfmuOGe3yFl2CUFY8o4J" src="https://plot.ly/embed.js" async></script>
-        </div>
-    </div>
-
-
-    <script>
-      document.getElementById("analyze_button").onclick = function() {
-        var university = document.getElementById("university").value;
-        var tuition = document.getElementById("tuition").value;
-        var program = document.getElementById("program").value;
-        var program_length = document.getElementById("lengthOfProgram").value;
-        var expected_help = document.getElementById("expected_help").value;
-        var grants = document.getElementById("grants").value;
-        var loans = document.getElementById("loans").value
-        var housing = document.getElementById("housing").value;
-        var income = document.getElementById("income").value;
-        console.log("univ",university)
-        //analyze, draw graph
-
-        //post
-      }
-
-
-    </script>
-
-    
 
 </body>
 </html>
