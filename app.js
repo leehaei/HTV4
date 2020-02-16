@@ -92,5 +92,22 @@ app.post('/auth', function(request, response) {
     }
 });
 
+app.post('/analyze', function(request, response) {
+    var username = "admin1";
+    var password = "1234";
+    var university = request.body.university;
+    var tuition = request.body.tuition;
+    var program = request.body.program;
+    var progLength = request.body.lengthOfProgram;
+    var finHelp = request.body.expected_help;
+    var grants = request.body.grants;
+    var loans = request.body.loans;
+    var housing = request.body.housing;
+    var incomeSchool = request.body.incomeSchool;
+    var incomeGrad = request.body.incomeGrad;
+    const finance = { username, password, university, tuition, program, progLength, finHelp, grants, loans, housing, incomeSchool, incomeGrad};
+    auth.analyze(finance);
+    response.render('finance');
+});
 
 module.exports = app;

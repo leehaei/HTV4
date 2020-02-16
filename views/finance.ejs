@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head> 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Our App</a>
+      <img src="image/text.png" style="width: 10%; height: 10%;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,31 +36,30 @@
     <!-- text field box -->
     <div class="form-group">
         <h1>Input your info</h1>
-        <form>
+        <form action="analyze" method="POST">
             <p>University</p>
-            <input type="text" id="form_university" placeholder="">          
+            <input type="text" id="university" name="university" placeholder="">          
             <p>Tuition</p>
-            <input type="text" id="form_tuition" placeholder="">
+            <input type="text" id="tuition" name="tuition" placeholder="">
             <p>Program</p>
-            <input type="text" id="form_program" placeholder="">
+            <input type="text" id="program" name="program" placeholder="">
             <p>Program Length</p>
-            <input type="text" id="form_lengthOfProgram" placeholder="">
+            <input type="text" id="lengthOfProgram" name="lengthOfProgram" placeholder="">
             <p>Expected Help</p>
-            <input type="text" id="form_expected_help" placeholder="">
+            <input type="text" id="expected_help"  name="expected_help" placeholder="">
             <p>Grants</p>
-            <input type="text" id="form_grants" placeholder="">
+            <input type="text" id="grants" name="grants" placeholder="">
             <p>Loans</p>
-            <input type="text" id="form_loans" placeholder="">
+            <input type="text" id="loans" name="loans" placeholder="">
             <p>Housing</p>
-            <input type="text" id="form_housing" placeholder="">
+            <input type="text" id="housing" name="housing" placeholder="">
             <p>Income During School</p>
-            <input type="text" id="form_income" placeholder="">
+            <input type="text" id="incomeSchool" name="incomeSchool" placeholder="">
             <p>Expected Income After Graduation</p>
-            <input type="text" id="form_income" placeholder="">
+            <input type="text" id="incomeGrad"  name="incomeGrad"placeholder="">
+            <button class="analyze-button" id="analyze_button"  type="analyze" name="analyze" value="analyze">Analyze</button>
         </form>    
-
-        <button class="analyze-button" id="analyze_button">Analyze</button>
-        <h5 id="error_msg">Error Msg</h3>
+        <!-- <h5 id="error_msg">Error Msg</h3> -->
     </div>
 
     <!--result displaying box  -->
@@ -75,15 +74,15 @@
 
     <script>
       document.getElementById("analyze_button").onclick = function() {
-        var university = document.getElementById("form_university").value;
-        var tuition = document.getElementById("form_tuition").value;
-        var program = document.getElementById("form_program").value;
-        var program_length = document.getElementById("form_lengthOfProgram").value;
-        var expected_help = document.getElementById("form_expected_help").value;
-        var grants = document.getElementById("form_grants").value;
-        var loans = document.getElementById("form_loans").value
-        var housing = document.getElementById("form_housing").value;
-        var income = document.getElementById("form_income").value;
+        var university = document.getElementById("university").value;
+        var tuition = document.getElementById("tuition").value;
+        var program = document.getElementById("program").value;
+        var program_length = document.getElementById("lengthOfProgram").value;
+        var expected_help = document.getElementById("expected_help").value;
+        var grants = document.getElementById("grants").value;
+        var loans = document.getElementById("loans").value
+        var housing = document.getElementById("housing").value;
+        var income = document.getElementById("income").value;
         console.log("univ",university)
         //analyze, draw graph
 

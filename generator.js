@@ -20,7 +20,7 @@ var totaldebt = 0;
 var currloan = loans;
 var interest = 0;
 
-function test() {
+function debtGenerator() {
     for(var i = 0; totaldebt >= 0; ++i) {
         var term = i + 1;
         if(term <= progLength) {
@@ -31,15 +31,12 @@ function test() {
         } else {
             //adjusts for interest 
             interest = (totaldebt * Math.pow(1 + loanInterest, i - progLength)) - totaldebt;
-            //
+            
             // adjusts for income increase
             incomeIncrease = (incomeGrad * Math.pow(1 + incomeInterest, i - progLength)) - incomeGrad;
             totaldebt = totaldebt + interest + housing - incomeGrad - incomeIncrease; 
             values.push(totaldebt);
         }
-        console.log("Total debt: " + totaldebt);
-        console.log("CurrLoan: " + currloan);
-        console.log("interest: " + interest);
     }
 
     for(var i = 0; i < values.length; ++i) {
@@ -64,4 +61,4 @@ function test() {
       });
 }
 
-test();
+debtGenerator();

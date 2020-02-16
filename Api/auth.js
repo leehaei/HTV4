@@ -44,6 +44,41 @@ module.exports = {
         }
     },
 
+    analyze: async (req, res, next) => {
+        try {
+            var username = req.username;
+            var password = req.password;
+            var university = req.university;
+            var tuition = req.tuition;
+            var program = req.program;
+            var progLength = req.progLength;
+            var finHelp = req.finHelp;
+            var grants = req.grants;
+            var loans = req.loans;
+            var housing = req.housing;
+            var incomeSchool = req.incomeSchool;
+            var incomeGrad = req.incomeGrad;
+
+            await User.update({username: username}, {
+                username: username, 
+                password: password, 
+                university: university,
+                tuition: tuition,
+                program: program,
+                progLength: progLength,
+                finHelp: finHelp,
+                grants: grants,
+                loans: loans,
+                housing: housing,
+                incomeSchool: incomeSchool,
+                incomeGrad: incomeGrad
+            });
+          }
+          catch(e) {
+            console.log('Catch an error: ', e)
+          }
+    },
+
     secret: async (req,res,next) => {
 
     }
