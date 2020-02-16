@@ -23,6 +23,7 @@
     "mongoose": "^5.9.1",
     "mongoose-double": "0.0.1",
     "morgan": "^1.9.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "plotly": "^1.0.6"
   }
 }

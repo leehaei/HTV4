@@ -5,6 +5,8 @@ var logger = require('morgan');
 var session = require('express-session');
 const mongoose = require('mongoose');
 const auth = require('./Api/auth');
+const generator = require('./generator');
+var plotly = require('plotly')('leehaei', '6Vw31h9ReggMDkwFDLs7');
 
 //MongoDB Connection
 const connectDB = require('./DB/Connection')
@@ -106,8 +108,16 @@ app.post('/analyze', function(request, response) {
     var incomeSchool = request.body.incomeSchool;
     var incomeGrad = request.body.incomeGrad;
     const finance = { username, password, university, tuition, program, progLength, finHelp, grants, loans, housing, incomeSchool, incomeGrad};
-    auth.analyze(finance);
-    response.render('finance');
+    var myFirstPromise = new Promise((resolve, reject) => {
+        auth.analyze(finance);
+        generator.debtGenerator(finance);
+        setTimeout( function() {
+          resolve("Success!") 
+        }, 1000) 
+      });
+      myFirstPromise.then((successMessage) => {
+        response.render('finance');
+      });
 });
 
 module.exports = app;
